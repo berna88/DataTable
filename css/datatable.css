@@ -1,0 +1,33 @@
+body {
+  font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+.header-cuervo{
+  background: transparent;
+  color: #808080;
+  font-family: "Source Sans Pro";
+}
+
+#example tbody tr{
+  background: black;
+  color: white;
+}
+#example .group td{
+  background: black !important;
+  padding: 18px 14px !important;
+  font-size: 16px;
+  color: #808080 !important;
+  border-style: solid !important;
+  border-color: #808080 !important;
+  font-family: "Source Sans Pro" !important;
+  text-transform: uppercase;
+}
+
+#example .group td:hover{
+  border-color: #CCB874 !important;
+  color: #CCB874 !important;
+}
