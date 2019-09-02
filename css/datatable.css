@@ -22,7 +22,7 @@ body {
     background: black !important;
     padding: 10px 32px !important;
     font-size: 16px;
-    color: #808080;
+    color: #CCB874 !important;
     border-style: none;
     /* border-color: #808080 !important; */
     font-family: "Source Sans Pro" !important;
@@ -61,3 +61,4 @@ body {
     border: 1px solid;
     margin: 2%;
     padding: 2%;
+}
