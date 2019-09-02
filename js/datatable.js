@@ -12,11 +12,9 @@ $(document).ready(function() {
         dataSrc: 2,
         startRender: function (rows, group) {
             var collapsed = !!collapsedGroups[group];
-
+            console.log(rows);
             rows.nodes().each(function (r) {
                 r.style.display = collapsed ? 'none' : '';
-               
-              
             });
 
             // Add category name to the <tr>. NOTE: Hardcoded colspan
@@ -24,7 +22,7 @@ $(document).ready(function() {
                 .append('<td  class="name-group" colspan="8"><div class="head">'+ group + '<span class="icon-politicas glyphicon glyphicon-chevron-down"></span></div></td>')
                 .attr('data-name', group)
                 .toggleClass('collapsed', collapsed);
-                
+
         }
       }
 
