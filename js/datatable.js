@@ -2,7 +2,7 @@ $(document).ready(function() {
  var collapsedGroups = {};
 
     var table = $('#example').DataTable({
-      searching: true,
+      searching: false,
       ordering:  false,
       paging: false,
       info: false,
@@ -15,13 +15,13 @@ $(document).ready(function() {
 
             rows.nodes().each(function (r) {
                 r.style.display = collapsed ? 'none' : '';
-                console.log(collapsed);
+               
               
             });
 
             // Add category name to the <tr>. NOTE: Hardcoded colspan
             return $('<tr/>')
-                .append('<td  class="name-group" colspan="8">'+ group + '<span class="icon-politicas glyphicon glyphicon-chevron-down"></span></td>')
+                .append('<td  class="name-group" colspan="8"><div class="head">'+ group + '<span class="icon-politicas glyphicon glyphicon-chevron-down"></span></div></td>')
                 .attr('data-name', group)
                 .toggleClass('collapsed', collapsed);
                 
@@ -35,11 +35,7 @@ $(document).ready(function() {
         collapsedGroups[name] = !collapsedGroups[name];
         table.draw(false);
         console.log(name);
-         if (collapsedGroups[name] == false ) {
-                $("#example .group td ").css("color","yellow");
-              console.log(collapsedGroups[name]);
-               }
-
+        
     });
 
 });
