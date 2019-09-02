@@ -1,5 +1,4 @@
 body {
-  font: 90%/1.45em "Helvetica Neue", HelveticaNeue, Verdana, Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   color: #333;
@@ -7,9 +6,12 @@ body {
 }
 
 .header-cuervo{
-  background: transparent;
-  color: #808080;
+  background: black;
+  color: white;
   font-family: "Source Sans Pro";
+}
+#example thead tr th{
+  text-align: center;
 }
 
 #example tbody tr{
@@ -18,7 +20,7 @@ body {
 }
 #example .group td{
   background: black !important;
-  padding: 18px 14px !important;
+  padding: 10px 32px !important;
   font-size: 16px;
   color: #808080 !important;
   border-style: solid !important;
@@ -30,4 +32,24 @@ body {
 #example .group td:hover{
   border-color: #CCB874 !important;
   color: #CCB874 !important;
+}
+#example .group td:focus{
+  border-color: #CCB874 !important;
+  color: #CCB874 !important;
+}
+#example tbody td {
+  border-top: .5px solid #808080;
+  padding: 14px 8px;
+}
+#example tbody .td-politicas {
+  text-align: center;
+}
+.icon-politicas{
+  float: right;
+}
+.top{
+  padding-top: 54px !important;
+}
+.name-product{
+  color: #CCB874;
 }

@@ -15,11 +15,12 @@ $(document).ready(function() {
 
             rows.nodes().each(function (r) {
                 r.style.display = collapsed ? 'none' : '';
+                
             });
 
             // Add category name to the <tr>. NOTE: Hardcoded colspan
             return $('<tr/>')
-                .append('<td colspan="8">'+ group +'</td>')
+                .append('<td onclick="color()"  class="name-group" colspan="8">'+ group + '<span class="icon-politicas glyphicon glyphicon-chevron-down"></span></td>')
                 .attr('data-name', group)
                 .toggleClass('collapsed', collapsed);
         }
@@ -30,6 +31,13 @@ $(document).ready(function() {
         var name = $(this).data('name');
         collapsedGroups[name] = !collapsedGroups[name];
         table.draw(false);
+
     });
 
 });
+/*
+function color(){
+  var names = document.getElementsByClassName('name-group');
+  console.log("Hola berna"+names);
+}
+*/
