@@ -2,7 +2,7 @@ $(document).ready(function() {
  var collapsedGroups = {};
 
     var table = $('#example').DataTable({
-      searching: false,
+      searching: true,
       ordering:  false,
       paging: false,
       info: false,
@@ -15,7 +15,8 @@ $(document).ready(function() {
 
             rows.nodes().each(function (r) {
                 r.style.display = collapsed ? 'none' : '';
-console.log("34");
+                console.log(collapsed);
+              
             });
 
             // Add category name to the <tr>. NOTE: Hardcoded colspan
@@ -33,7 +34,12 @@ console.log("34");
         var name = $(this).data('name');
         collapsedGroups[name] = !collapsedGroups[name];
         table.draw(false);
-console.log("20");
+        console.log(name);
+         if (collapsedGroups[name] == false ) {
+                $("#example .group td ").css("color","yellow");
+              console.log(collapsedGroups[name]);
+               }
+
     });
 
 });
