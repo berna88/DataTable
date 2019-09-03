@@ -1,8 +1,9 @@
 $(document).ready(function() {
  var collapsedGroups = {};
 
-    var table = $('#example').DataTable({
+    var table = $('#tbl-politicas').DataTable({
       searching: false,
+      responsive: true,
       ordering:  false,
       paging: false,
       info: false,
@@ -28,7 +29,7 @@ $(document).ready(function() {
 
     });
 
-   $('#example tbody').on('click', 'tr.group-start', function () {
+   $('#tbl-politicas tbody').on('click', 'tr.group-start', function () {
         var name = $(this).data('name');
         collapsedGroups[name] = !collapsedGroups[name];
         table.draw(false);
