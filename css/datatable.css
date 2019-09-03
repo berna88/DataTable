@@ -3,6 +3,7 @@ body {
   padding: 0;
   color: #333;
   background-color: #fff;
+  font-family: "Source Sans Pro" !important;
 }
 
 .header-cuervo{
@@ -59,6 +60,6 @@ body {
 
 .head {
     border: 1px solid;
-    margin: 2%;
-    padding: 2%;
+    margin: 1px;
+    padding: 7px 16px;
 }
