@@ -8,6 +8,13 @@ $(document).ready(function() {
       paging: false,
       info: false,
       order: [[2, 'asc']],
+      columnDefs: [
+            {
+                "targets": [ 2 ],
+                "visible": false,
+                "searchable": false
+            }
+        ],
       rowGroup: {
         // Uses the 'row group' plugin
         dataSrc: 2,
@@ -34,7 +41,7 @@ $(document).ready(function() {
         collapsedGroups[name] = !collapsedGroups[name];
         table.draw(false);
         console.log(name);
-        
+
     });
 
 });
