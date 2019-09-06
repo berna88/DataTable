@@ -13,7 +13,7 @@ $(document).ready(function() {
         dataSrc: 2,
         startRender: function (rows, group) {
             var collapsed = !!collapsedGroups[group];
-            console.log(rows);
+            
             rows.nodes().each(function (r) {
                 r.style.display = collapsed ? 'none' : '';
             });

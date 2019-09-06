@@ -15,6 +15,9 @@
     
     <link rel="stylesheet" href="css/datatable.css">
     <script type="text/javascript" src="js/datatable.js"> </script>
+
+
+    
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -26,52 +29,77 @@
   </head>
   <body>
     <div class="container">
+
+        <input type="text" class="form-control input-politicas-busqueda" id="palabras" placeholder="Palabras clave">
       <table id="tbl-politicas" class="display" style="width:100%">
         <thead>
             <tr class="header-cuervo">
-                <th>Material</th>
-                <th>Descripción</th>
-                <th>Capacidad</th>
-                <th>Precio Normal</th>
-                <th>Precio Banquete</th>
-                <th>Precio Especial</th>
+                <th>Nombre</th>
+                <th>Formato</th>
+                <th>Categoria</th>
+                <th>Actualizacion</th>
+                
             </tr>
         </thead>
-        <tbody>
+        <tbody id="myTable">
             <tr>
                 <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
                 <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Tequila</td>
+                <td class="td-politicas top">Formatos</td>
                 <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
+               
             </tr>
             <tr>
                 <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
                 <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Tequila</td>
+                <td class="td-politicas top">Formatos</td>
                 <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
+               
             </tr>
             <tr>
                 <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
                 <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Tequila</td>
+                <td class="td-politicas top">Politicas</td>
                 <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
+                
+            </tr>
+              <tr>
+                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
+                <td class="td-politicas top">System Architect</td>
+                <td class="td-politicas top">Formatos</td>
+                <td class="td-politicas top">61</td>
+               
+            </tr>
+             <tr>
+                <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
+                <td class="td-politicas top">System Architect</td>
+                <td class="td-politicas top">Procedimientos</td>
+                <td class="td-politicas top">61</td>
+                
             </tr>
             <tr>
                 <td class="td-politicas" data-search="Tiger Nixon"><h4 class="name-product">Mausalen</h4>T. Nixon</td>
                 <td class="td-politicas top">System Architect</td>
-                <td class="td-politicas top">Vodka</td>
+                <td class="td-politicas top">Instructivos</td>
                 <td class="td-politicas top">61</td>
-                <td class="td-politicas top" data-order="1303689600">Mon 25th Apr 11</td>
-                <td class="td-politicas top" data-order="320800">$320,800/y</td>
+             
             </tr>
         </tbody>
     </table>
     </div>
+
+
+        <script>
+$(document).ready(function(){
+  $("#palabras").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+
+</script>
   </body>
 </html>
